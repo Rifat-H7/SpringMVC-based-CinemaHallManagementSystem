@@ -12,6 +12,7 @@ How to run this project:
 2. Configure smart tomcat and java(suitable version-8)
 3. open mysql/datagrip
 4. paste below query-
+5. 
    CREATE TABLE user (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   username VARCHAR(255) NOT NULL,

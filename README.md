@@ -20,7 +20,9 @@ How to run this project:
   enabled TINYINT(1) NOT NULL,
   created_on DATE,
   PRIMARY KEY (id)
+
 );
+
 CREATE TABLE customer (
   id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   gender varchar(10) NOT NULL,
@@ -30,8 +32,6 @@ CREATE TABLE customer (
   KEY FK_CUSTOMER_USER (user_id),
   CONSTRAINT FK_CUSTOMER_USER FOREIGN KEY (user_id) REFERENCES user (id)
 );
-
-
 
 CREATE TABLE address (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -50,6 +50,7 @@ CREATE TABLE customer_order (
   CONSTRAINT FK_CUSTOMER_ORDER_PRODUCT FOREIGN KEY (product_id) REFERENCES product (id),
   CONSTRAINT FK_CUSTOMER_ORDER_CUSTOMER FOREIGN KEY (customer_id) REFERENCES customer (id)
 );
+
 create table product
 (
     id          bigint unsigned auto_increment
@@ -66,6 +67,7 @@ create table product
         foreign key (schedule_id) references schedule (id)
             on update cascade on delete cascade
 );
+
 create table schedule
 (
     id         bigint unsigned auto_increment
@@ -78,4 +80,5 @@ create table schedule
         foreign key (product_id) references product (id)
             on update cascade on delete cascade
 );
+
 5.run 

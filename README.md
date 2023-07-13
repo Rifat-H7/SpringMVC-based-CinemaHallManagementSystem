@@ -1,5 +1,6 @@
 # SpringMVC-based-CinemaHallManagementSystem
 Disclaimer: Seat arrangement section is still under development
+
 Technologies used:
 1. Spring MVC
 2. Spring Security
